@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecomerce website with payment</title>
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Box icons-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <!--Nav-->
+        <div class="nav container">
+            <!--Logo-->
+            <a href="#" class="logo">Ecomerce</a>
+            <!--Cart Icon-->
+            <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            <div class="cart">
+                <h2 class="cart-title">Your cart</h2>
+                <!--Content-->
+                <div class="cart-content">
+                </div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">0$</div>
+                </div>
+                <!--Buy button-->
+                <button type="button" class="btn-button">Buy now</button>
+                <!--Close cart-->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+    <!--Products-->
+    <section class="shop container">
+        <h2 class="section-title">Shop products</h2>
+        <!--Shop Content-->
+        <div class="shop-content">
+            <!--Box 1-->
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <img src="img/product1.jpeg" alt="" class="product-img">
+                <h2 class="product-title">Adicolor 1</h2>
+                <span class="price">$50.2</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--Box 1-->
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <img src="img/product1.jpeg" alt="" class="product-img">
+                <h2 class="product-title">Adicolor 2</h2>
+                <span class="price">$50.3</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--Box 3-->
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <img src="img/product1.jpeg" alt="" class="product-img">
+                <h2 class="product-title">Adicolor 3</h2>
+                <span class="price">$70</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--Box 4-->
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <img src="img/product1.jpeg" alt="" class="product-img">
+                <h2 class="product-title">Adicolor 4</h2>
+                <span class="price">$80</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--Box 5-->
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <img src="img/product1.jpeg" alt="" class="product-img">
+                <h2 class="product-title">Adicolor 5</h2>
+                <span class="price">$80.1</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--Box 6-->
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <img src="img/product1.jpeg" alt="" class="product-img">
+                <h2 class="product-title">Adicolor 6</h2>
+                <span class="price">$80.2</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--Box 7-->
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <img src="img/product1.jpeg" alt="" class="product-img">
+                <h2 class="product-title">Adicolor 7</h2>
+                <span class="price">$80.3</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <!--Box 8-->
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <img src="img/product1.jpeg" alt="" class="product-img">
+                <h2 class="product-title">Adicolor 8</h2>
+                <span class="price">$80.4</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/dinamic.js"></script>
+
+</body>
+</html>
