@@ -1,0 +1,86 @@
+img{
+    max-width: 100%;
+}
+h2, h3, p{
+    text-align: center;
+}
+h3{
+    font-size: 22px;
+    color: #000000;
+}
+.item div{
+    color: #000000;
+}
+.linear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.servs{
+    margin: 20px 0px 20px 0px;
+}
+.card .card-title{
+    text-align: center;
+}
+.card .card-text{
+    text-align: justify;
+    font-size: 12px;
+}
+.linear{
+    gap: 20px;
+}
+.card{
+    max-width: 400px;
+}
+.enviar{
+    background: var(--container-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    margin: 0px auto 0px auto;
+}
+.enviar:hover{
+    opacity: 0.8;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+h2{
+    color: #000000;
+    font-size: 28px;
+}
+h3{
+    font-size: 22px !important;
+    margin: 10px 0px 10px 0px;
+}
+i{
+    color: #000000;
+    transition: all 0.3s ease-in;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+}
+.servs p{
+    color: #000000;
+}
+.linear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 940px){
+    .linear{
+        display: flex;
+        flex-direction: column;
+    }
+}

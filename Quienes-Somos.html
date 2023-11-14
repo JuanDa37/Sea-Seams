@@ -1,33 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+<link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="stylesheet" href="css/quienes-somos.css" />
+  </head>
+  <body>
+
+    <header>
+      <!--Nav-->
+      <div class="nav container nav-bar">
+          <!--Logo-->
+          <i class='bx bx-menu sidebarOpen'></i>
+          <div class="logos">
+          <a href="index.html" class="logo navLogo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+          <div>
+              <p class="titulo">SEA & SEAMS</p>
+              <p class="slogan">Headway Clothing</p>
+          </div>
+          </div>
+          <div class="menu">
+              <div class="logo-togle">
+                  <a href="index.html" class="logo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+                  <div>
+                      <p class="titulo">SEA & SEAMS</p>
+                      <p class="slogan">Headway Clothing</p>
+                  </div>
+                  <i class='bx bx-x sidebarClose'></i>
+              </div>
+              <ul class="nav-links">
+                  <li><a href="index.html">Inicio</a></li>
+                      <li class="submenu">
+                          <div class="dropdown">
+                              <a href="tienda.html" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                              <ul class="sub-menu dropdown-menu">
+                                  <li><a href="tienda.html" class="dropdown-item">Sombreros</a></li>
+                                  <li><a href="#" class="dropdown-item">Blusas</a></li>
+                                  <li><a href="#" class="dropdown-item">Conjuntos</a></li>
+                                              <li><a href="#" class="dropdown-item">Vestidos</a></li>
+                                              <li><a href="#" class="dropdown-item">Tacones</a></li>
+                                              <li><a href="#" class="dropdown-item">Shorts</a></li>
+                              </ul>
+                          </div>
+                      </li></li>
+                  <li><a href="quienes-somos.html">Nosotros</a></li>
+                  <li class="submenu">
+                      <div class="dropdown">
+                          <a href="servicios.html" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                          <ul class="sub-menu dropdown-menu">
+                              <li><a href="servicios.html" class="dropdown-item">Vender</a></li>
+                              <li><a href="#" class="dropdown-item">Comprar</a></li>
+                              <li><a href="#" class="dropdown-item">Cambiar</a></li>
+                          </ul>
+                      </div>
+                  </li>
+                  <li><a href="#">Agendar Cita</a></li>
+                  <li><a href="#">Mi cuenta</a></li>
+              </ul>
+          </div>
+          <div class="darkLight-searchBox">
+              <!--<div class="darkLight">
+                  <i class='bx bx-moon moon'></i>
+                  <i class='bx bx-sun sun'></i>
+              </div>-->
+              <!--<div class="searchBox">
+                  <div class="searchTogle">
+                      <i class='bx bx-x cancel'></i>
+                      <i class='bx bx-search search'></i>
+
+                      <div class="search-field">
+                          <input type="text" placeholder="...Search">
+                          <i class='bx bx-search'></i>
+                      </div>
+
+              </div>
+              </div>-->
+              <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+          </div>
+          <!--Cart Icon-->
+          <div class="cart">
+              <h2 class="cart-title">Your cart</h2>
+              <!--Content-->
+              <div class="cart-content cart-content-scroll">
+              </div>
+              <!--Total-->
+              <div class="total">
+                  <div class="total-title">Total</div>
+                  <div class="total-price">0$</div>
+              </div>
+              <!--Buy button-->
+              <button type="button" class="btn-button">Buy now</button>
+              <!--Close cart-->
+              <i class='bx bx-x' id="close-cart"></i>
+          </div>
+      </div>
+  </header>
+
+    <div
+      style="
+        background-image: url('img/sea&Seams.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: black;
+      "
+      class="hero claridad bg-image image"
+    >
+      <div class="ampliar"></div>
+    </div>
     <main>
+      <div class="container">
+        <div class="eslogan">
+          <p>LA MEJOR PRENDA ES LA QUE YA EXISTE</p>
+        </div>
         <aside></aside>
-        <div class="hero">
-            <img src="" alt="">
-        </div>
-        <div>
+        <div class="quienes-somos">
             <h1>Quienes Somos</h1>
+            <p>
+                En SEA & SEAMS nos encargamos de darle una segunda oportunidad a
+                prendas, zapatos y accesorios en perfectas condiciones que ya no están
+                en uso por sus dueños. A través de la venta, compra, trueque y
+                alquiler de prendas prendas, promovemos una cultura de moda sostenible
+                y consciente, damos oportunidad a todos de adquirir prendas de alta
+                calidad a precios bajos, intentamos frenar las consecuencias
+                ambientales que generan la industria textil y rechazamos completamente
+                la explotación laboral de hombres, mujeres y niños en las fábricas
+                alrededor del mundo.
+            </p>
         </div>
-        <div class="vision-mision">
-            <div class="mision">
-                <div class="info">
-                    <h2>Nuestra misión</h2>
+        <div class="contenedor-cards">
+            <div class="vision-mision">
+                <div class="card">
+                    <img src="img/product1.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">Nuestra Misión y Visión</h2>
+                        <p class="card-text">
+                            Nuestra misión es frenar la moda rápida por medio de la
+                            reutilizacion de prendas textiles, nuestra visión es marcar
+                            tendencia en todo Colombia sobre el consumo de moda de segunda
+                            mano
+                        </p>
+                    </div>
+                  </div>
+            </div>
+            <div class="valores">
+                <div class="divisor">
+                    <div class="card">
+                        <img src="img/product1.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h2 class="card-title">Valores</h2>
+                            <p class="card-text">
+                                El valor que nos caracteriza principalmente es la justicia, tanto
+                                en el plano ambiental al velar por la conservación de ríos y
+                                océanos como en la industria laboral al decir »no» a compañías que
+                                promueven la esclavitud laboral.
+                            </p>
+                        </div>
+                      </div>
                 </div>
             </div>
-            <div class="vision">
-                <div class="info">
-                    <h2>Nuestra visión</h2>
-                </div>
-            </div>
         </div>
-        <h2>Nuestro lema</h2>
-        <h2>Nuestro nombre</h2>
+        <section>
+          <div class="maps">
+            <h1>¿Donde nos puesde encontrar?</h1>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.168831669755!2d-73.11785340000002!3d7.106423700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fd787f573b1%3A0xb6c859d7e6808216!2sSea%20%26%20Seams!5e0!3m2!1ses!2sco!4v1699305922104!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <!--<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <div>
+                  <p class="titulo">Ubicación</p>
+                  <p>CRA 17 B1. # 17 - 70</p>
+                  <i class='bx bxs-location-plus' ></i>
+                </div>
+                <div>
+                  <p class="titulo">Horario de atención</p>
+                  <p>Saca tu cita </p>
+                </div>
+              </div>
+            </div>-->
+          </div>
+        </section>
+    </div>
     </main>
-</body>
+    
+    <footer>
+      <div class="final">
+          <div class="container">
+              <div class="row elemento">  
+                  <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                      <p class="titulo">Visita nuestras redes sociales</p>
+                      <div class="redes">
+                          <a href="https://www.facebook.com/profile.php?id=100083532272187">
+                              <i class='bx bxl-facebook' ></i>
+                          </a>
+                          <p>Sea & Seams</p>
+                      </div>
+                      <div class="redes">
+                          <a href="https://www.instagram.com/seaams/">
+                              <i class='bx bxl-instagram'></i>
+                          </a>
+                          <p>Sea & Seams</p>
+                      </div>
+                      <div class="redes">
+                          <a href="https://www.youtube.com/channel/UC0WSKg812tMljiGuQqHdwzA?view_as=subscriber">
+                              <i class='bx bxl-youtube'></i>
+                          </a>
+                          <p>Sea & Seams</p>
+                      </div>
+                      <div class="redes">
+                          <a href="">
+                              <i class='bx bxl-whatsapp'></i>
+                          </a>
+                          <p>318 3168 27293</p>
+                      </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-3 col-md-3 col-xl-3">
+                      <p class="titulo">Políticas</p>
+                      <a href=""><p>Política de privacidad</p></a>
+                      <a href=""><p>Política de envios</p></a>
+                      <a href=""><p>Política de devolución</p></a>
+                      <a href=""><p>Política de garantia</p></a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                      <p class="titulo">Horario de atención</p>
+                      <p>Ciita previa al teléfono</p>
+                      <p>(+57) 318 525 8389</p>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                      <p class="titulo">Dirección</p>
+                      <p>Cra. 17 B1 # 57 - 70</p>
+                      <p>Puerta del sol, Bucaramanga Santander</p>
+                  </div>
+              </div>
+              <div class="row indicador">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                      <hr>
+                      <p>@Copyright sea-seams. Todos los derechos reservados.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  </body>
 </html>

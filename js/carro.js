@@ -14,7 +14,7 @@ const searchTogle = document.querySelector(".searchTogle");
 const cancel = document.querySelector(".cancel")
 
 // Agrega un evento de clic al elemento .searchTogle
-/*searchTogle.addEventListener("click", () => {
+searchTogle.addEventListener("click", () => {
     // Alternar la clase "active" en el elemento .searchTogle
     searchTogle.classList.add("active");
 });
@@ -33,7 +33,7 @@ function closeSearch(event) {
 }
 
 // Agrega un event listener al documento para cerrar la barra de búsqueda si se hace clic en cualquier lugar fuera de ella
-document.addEventListener("click", closeSearch);*/
+document.addEventListener("click", closeSearch);
 
 
 

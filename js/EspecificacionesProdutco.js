@@ -1,3 +1,37 @@
+var container = document.getElementById('container2')
+var container2 = document.getElementById('container3')
+var container3 = document.getElementById('container4')
+
+const item  = document.getElementsByClassName('item2')
+
+container.addEventListener('click', (e) => {
+    if(e.target.classList.contains('item2')){
+        e.target.parentElement.classList.toggle('scale')
+        e.target.children[1].classList.toggle('rotate')
+    }
+})
+
+/*function ingresar(container, container2, container3){
+    container.addEventListener('click', (e) => {
+        if(e.target.classList.contains('item')){
+            e.target.parentElement.classList.toggle('scale')
+            e.target.children[1].classList.toggle('rotate')
+        }
+    })
+    /*container2.addEventListener('click', (e) => {
+        if(e.target.classList.contains('item')){
+            e.target.parentElement.classList.toggle('scale')
+            e.target.children[1].classList.toggle('rotate')
+        }
+    })
+    container3.addEventListener('click', (e) => {
+        if(e.target.classList.contains('item')){
+            e.target.parentElement.classList.toggle('scale')
+            e.target.children[1].classList.toggle('rotate')
+        }
+    })
+}*/
+
 // Cart Open Close
 let CartIcon = document.querySelector("#cart-icon");
 let Cart = document.querySelector(".cart")
@@ -11,30 +45,12 @@ const sidebarOpen = document.querySelector(".sidebarOpen");
 const sideClose = document.querySelector(".sidebarClose");
 // Selecciona los elementos necesarios
 const searchTogle = document.querySelector(".searchTogle");
-const cancel = document.querySelector(".cancel")
 
 // Agrega un evento de clic al elemento .searchTogle
-/*searchTogle.addEventListener("click", () => {
+searchTogle.addEventListener("click", () => {
     // Alternar la clase "active" en el elemento .searchTogle
-    searchTogle.classList.add("active");
+    searchTogle.classList.toggle("active");
 });
-cancel.addEventListener("click", () => {
-    searchTogle.classList.remove("active")
-})
-
-function closeSearch(event) {
-    // Verifica si el clic no está dentro de la barra de búsqueda ni en el icono de búsqueda
-    if (!searchTogle.contains(event.target) && !cancel.contains(event.target)) {
-        searchTogle.classList.remove("active");
-
-        // Elimina el event listener del documento
-        document.removeEventListener("click", closeSearch);
-    }
-}
-
-// Agrega un event listener al documento para cerrar la barra de búsqueda si se hace clic en cualquier lugar fuera de ella
-document.addEventListener("click", closeSearch);*/
-
 
 
 /*let getMode = localStorage.getItem("mode");
@@ -129,7 +145,7 @@ function addCartClicked(event){
     var shopProducts = button.parentElement;
     var title = shopProducts.getElementsByClassName("product-title")[0].innerText;
     var price = shopProducts.getElementsByClassName("price")[0].innerText
-    var ProductingImg = shopProducts.getElementsByClassName("product-img")[0].src;
+    var ProductingImg = document.getElementsByClassName("product-img")[0].src;
     addProductToCart(title, price, ProductingImg);
     updateTotal();
     saveCartItems();
