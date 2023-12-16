@@ -204,7 +204,7 @@ app.post("/stripe-checkout", async (req, res) => {
     const session = await stripeGateway.checkout.sessions.create({
         payment_method_types: ["card"],
         mode: "payment",
-        success_url: `http://localhost:3000/success`,
+        success_url: `http://local/success`,
         cancel_url: `http://localhost:3000/cancel`,
         line_items: lineItems,
         //Asking address in checkout page
