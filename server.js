@@ -4,13 +4,15 @@ import dotenv from "dotenv";
 
 import stripe from "stripe";
 
-import path from 'path';
-
 import morgan from 'morgan';
 
 import mysql from 'mysql';
 
 import myConnection from 'express-myconnection';
+
+import {dirname, join} from 'path';
+
+import {fileURLToPath} from 'url';
 
 //load variables
 
@@ -23,6 +25,10 @@ const app = express();
 app.use(express.static('public'));
 
 app.use(express.json());
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
+app.set('views', join(__dirname, 'views'))
 
 app.set('port', process.env.PORT || 3000);
 
@@ -44,6 +50,8 @@ app.use(morgan('dev'));
 
 
 //Home route
+
+app.get('tienda', (req, res) => res.render('tienda'))
 
 app.get('/', (req, res) => {
     res.sendFile('tienda.html', {
