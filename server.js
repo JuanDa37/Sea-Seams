@@ -51,7 +51,7 @@ app.use(morgan('dev'));
 
 //Home route
 
-app.get('tienda', (req, res) => res.render('tienda'))
+app.get('/tienda', (req, res) => res.render('tienda'))
 
 app.get('/', (req, res) => {
     res.sendFile('tienda.html', {
