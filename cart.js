@@ -2,7 +2,7 @@ const payBtn = document.querySelector('.btn-button');
 
 //evento para rrecopilar los seleccionados en memoria y mandarlos al banckend a la pasarela
 payBtn.addEventListener("click", () => {
-    fetch("/stripe-checkout", {
+    fetch("https://sea-seams.netlify.app/stripe-checkout", {
         method: "post",
         headers: new Headers({"Content-Type": "application/Json"}),
         body:JSON.stringify({
