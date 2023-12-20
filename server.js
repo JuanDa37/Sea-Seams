@@ -105,6 +105,10 @@ app.get("/Politica-De-Garantia", (res, req) => {
     });
 })
 
+app.get('/api/asi', function(req, res){
+    return res.end("polo");
+})
+
 //PoliticaDeDevoluciones
 
 app.get("/Politica-De-Devoluciones", (res, req) => {
