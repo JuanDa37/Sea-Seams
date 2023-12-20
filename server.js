@@ -53,9 +53,11 @@ app.get('/', (req, res) => {
 
 //tienda
 
-app.get("/tienda", (req, res) => {
-    res.send("Exprees en vercel");
-});
+app.get("/tienda", (res, req) => {
+    req.sendFile("tienda.html", {
+        root: "public"
+    });
+})
 
 //servicios
 
@@ -103,10 +105,6 @@ app.get("/Politica-De-Garantia", (res, req) => {
     req.sendFile("PoliticaDeGarantia.html", {
         root: "public"
     });
-})
-
-app.get('/api/asi', function(req, res){
-    return res.end("polo");
 })
 
 //PoliticaDeDevoluciones
@@ -205,10 +203,7 @@ app.post("/stripe-checkout", async (req, res) => {
     res.json(session.url);
 })
 
-
 //Puerto en el que sorre el sitio web
 app.listen(3000, () => {
     console.log("listening on port 3000;");
 })
-
-module.exports = app
