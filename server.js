@@ -53,11 +53,9 @@ app.get('/', (req, res) => {
 
 //tienda
 
-app.get("/tienda", (res, req) => {
-    req.sendFile("tienda.html", {
-        root: "public"
-    });
-})
+app.get("/tienda", (req, res) => {
+    res.send("Exprees en vercel");
+});
 
 //servicios
 
