@@ -203,7 +203,10 @@ app.post("/stripe-checkout", async (req, res) => {
     res.json(session.url);
 })
 
+
 //Puerto en el que sorre el sitio web
 app.listen(3000, () => {
     console.log("listening on port 3000;");
 })
+
+module.exports = app
