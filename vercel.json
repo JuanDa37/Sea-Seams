@@ -1,0 +1,12 @@
+{
+    "functions":{
+        "server.js":{
+            "runtime":"now@node1.6.1"
+        }
+    }
+},
+{
+    "rewrites":[{
+        "source":"/(.*)", "destination":"server.js"
+    }]
+}
