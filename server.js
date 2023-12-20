@@ -4,15 +4,13 @@ import dotenv from "dotenv";
 
 import stripe from "stripe";
 
+import path from 'path';
+
 import morgan from 'morgan';
 
 import mysql from 'mysql';
 
 import myConnection from 'express-myconnection';
-
-import {dirname, join} from 'path';
-
-import {fileURLToPath} from 'url';
 
 //load variables
 
@@ -26,15 +24,9 @@ app.use(express.static('public'));
 
 app.use(express.json());
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-
-app.set('views', join(__dirname, 'views'))
-
 app.set('port', process.env.PORT || 3000);
 
 app.set('view engine', 'ejs');
-
-app.use(express.static('public'))
 
 /*app.set('public', path.join(__dirname, 'public'));
 app.use(express.static('public'));
@@ -52,8 +44,6 @@ app.use(morgan('dev'));
 
 
 //Home route
-
-app.get('/tienda', (req, res) => res.render('tienda'))
 
 app.get('/', (req, res) => {
     res.sendFile('tienda.html', {
@@ -183,8 +173,8 @@ let DOMAIN = process.env.DOMAIN;
 //Método para conectar con las pasarela y mnadar los productos
 app.post("/stripe-checkout", async (req, res) => {
     const lineItems = req.body.items.map((item) => {
-        const unitAmount = parseInt(item.price.replace(/[^0-9.-]+/g, "")* 100)
         console.log("item-price:", item.price);
+        const unitAmount = parseInt(item.price.replace(/[^0-9.-]+/g, "")* 100)
         console.log("unitAmount:", unitAmount);
         return{
             price_data:{
@@ -204,7 +194,7 @@ app.post("/stripe-checkout", async (req, res) => {
     const session = await stripeGateway.checkout.sessions.create({
         payment_method_types: ["card"],
         mode: "payment",
-        success_url: `http://local/success`,
+        success_url: `http://localhost:3000/success`,
         cancel_url: `http://localhost:3000/cancel`,
         line_items: lineItems,
         //Asking address in checkout page

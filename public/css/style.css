@@ -261,25 +261,10 @@ section{
     font-size: 20px;
     margin: 20px 0px 0px 0px;
 }
-body{
-    display: flex;
-    min-height: 100vh;
-    flex-wrap: wrap;
-    justify-content: center;
-    /*align-items: center;*/
-}
-footer{
-    align-self: flex-end;
-    width: 100%;
-
-}
 .cards h2{
     color: #000000;
 }
-.shop-content{
-    display: flex;
-    align-items: center;
-}
+
 .hero{
     opacity: 1;
     display: block;
@@ -296,4 +281,15 @@ footer{
     text-align: center;
     color: var(--container-color);
     margin: 20px 0px 0px 0px;
+}
+.shop-content{
+    
+}
+.shop-content{
+    margin: 0px 10px 0px 10px;
+}
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 20px;
 }

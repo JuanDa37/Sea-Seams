@@ -115,3 +115,15 @@
 .central p, h1{
     color: #000000;
 }
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*align-items: center;*/
+}
+footer{
+    align-self: flex-end;
+    width: 100%;
+
+}
