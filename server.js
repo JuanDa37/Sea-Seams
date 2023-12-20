@@ -117,7 +117,7 @@ app.get("/Politica-De-Devoluciones", (res, req) => {
 
 //TiendaVestidos
 
-app.get("https://sea-seams-empresa.vercel.app/TiendaVestidos", (res, req) => {
+app.get("/TiendaVestidos", (res, req) => {
     req.sendFile("TiendaVestidos.html", {
         root: "public"
     });
