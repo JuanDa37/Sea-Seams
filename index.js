@@ -185,7 +185,7 @@ app.post("/stripe-checkout", async (req, res) => {
         payment_method_types: ["card"],
         mode: "payment",
         success_url: `/success`,
-        cancel_url: `http://localhost:3000/cancel`,
+        cancel_url: `/cancel`,
         line_items: lineItems,
         //Asking address in checkout page
         billing_address_collection: "required"
