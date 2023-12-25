@@ -184,8 +184,8 @@ app.post("/stripe-checkout", async (req, res) => {
     const session = await stripeGateway.checkout.sessions.create({
         payment_method_types: ["card"],
         mode: "payment",
-        success_url: `http://localhost:3000/success`,
-        cancel_url: `http://localhost:3000/cancel`,
+        success_url: `https://sea-seams.vercel.app/success`,
+        cancel_url: `https://sea-seams.vercel.app/cancel`,
         line_items: lineItems,
         //Asking address in checkout page
         billing_address_collection: "required"
