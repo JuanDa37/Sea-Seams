@@ -171,7 +171,7 @@ app.post("/stripe-checkout", async (req, res) => {
                 currency: "cop",
                 product_data:{
                     name: item.title,
-                    images: [item.productImg]
+                    images: [item.productImg],
                 },
                 unit_amount: unitAmount,
             },
