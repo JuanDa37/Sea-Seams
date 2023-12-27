@@ -163,32 +163,30 @@ let DOMAIN = process.env.DOMAIN;
 //Método para conectar con las pasarela y mnadar los productos
 app.post("/stripe-checkout", async (req, res) => {
     const lineItems = req.body.items.map((item) => {
-        console.log("item-price:", item.price);
-        const unitAmount = parseInt(item.price.replace(/[^0-9.-]+/g, "")* 100)
-        console.log("unitAmount:", unitAmount);
-        return{
-            price_data:{
+        const unitAmount = Math.round(parseFloat(item.price.replace(/[^0-9.-]+/g, "")) * 100);
+        return {
+            price_data: {
                 currency: "cop",
-                product_data:{
+                product_data: {
                     name: item.title,
                     images: [item.productImg],
                 },
                 unit_amount: unitAmount,
             },
             quantity: item.quantity,
-        }
-    })
-    console.log("lineItems:", lineItems);
+        };
+    });
 
-    //Create checkout sesion
+    // Crear la sesión de pago
     const session = await stripeGateway.checkout.sessions.create({
         payment_method_types: ["card"],
         mode: "payment",
-        success_url: `https://sea-seams.vercel.app/success`,
-        cancel_url: `https://sea-seams.vercel.app/cancel`,
+        success_url: `http://localhost:3000/success`,
+        cancel_url: `http://localhost:3000/cancel`,
         line_items: lineItems,
-        //Asking address in checkout page
-        billing_address_collection: "required"
-    })
-    res.json(session.url);
-})
+        // Pedir la dirección en la página de pago
+        billing_address_collection: "required",
+    });
+
+    res.json( session.url );
+});
