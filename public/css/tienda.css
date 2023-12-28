@@ -678,7 +678,6 @@ select{
     width: 100%;
     max-height: 100vh;
     height: 100%;
-    max-width: 900px;
 }
 .lightbox:target{
     transform: scale(1);
