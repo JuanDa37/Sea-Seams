@@ -129,7 +129,7 @@ h3{
     color: #ffffff;
 }
 .scale{
-    height: 300px;
+    height: auto;
     overflow: hidden;
     transition: height 0.6s ease;
 }
